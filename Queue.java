@@ -1,13 +1,26 @@
+package com.company;
+
 public class Queue {
-   // your code is here
+    int[] array=new int[3];
+    int counter=0;
+    // your code is here
     public void push(int pushedElement){
-       //your code is here
+        array[counter]=pushedElement;
+        counter++;
+        //your code is here
     }
     public void pop(){
+        System.out.println(array[0]);
+        for (int i=0;i<2;i++){
+            array[i]=array[i+1];
+        }
+        array[counter-1]=0;
+        counter--;
         //your code is here
     }
     public void display(){
-        //your code is here
+        for(int j=0;j<counter;j++){
+            System.out.println(array[j]);
+        }
     }
-
 }
